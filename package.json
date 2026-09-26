@@ -1,0 +1,37 @@
+{
+  "name": "agence-sam",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c yellow,cyan \"node server/index.mjs\" \"vite --config web/vite.config.ts\"",
+    "start": "node server/index.mjs",
+    "build": "vite build --config web/vite.config.ts",
+    "preview": "npm run build && node server/index.mjs",
+    "test:parser": "node --test server/parser.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "@tailwindcss/vite": "^4.1.13",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.3",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.7"
+  }
+}
